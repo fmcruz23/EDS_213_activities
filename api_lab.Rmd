@@ -1,5 +1,5 @@
 ---
-title: "Assignment 2.1-2.2"
+title: "Using APIs"
 author: "Felicia Cruz"
 date: "10/6/2021"
 output: html_document
@@ -14,10 +14,8 @@ library(dataRetrieval)
 library(tidyverse)
 library(metajam)
 library(here)
-
 ```
 
-## 2.1 - `dataRetrieval`
 
 ## Plot the discharge time-series for the Ventura River from 2019-10-01 to 2020-10-05
 ```{r}
@@ -31,7 +29,7 @@ ggplot(data = ventura_discharge, aes(x = Date, y = X_00060_00003)) +
   
 ```
 
-## 2.2 - `metajam`
+
 ## metajam 
  - relies on the dataONE API to download data and metadata into your R Environment
  
