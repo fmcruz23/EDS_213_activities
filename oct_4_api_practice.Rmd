@@ -1,0 +1,28 @@
+---
+title: "Oct. 4 API Practice"
+author: "Felicia Cruz"
+date: "10/4/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(purrr)
+library(httr)
+```
+
+```{r}
+r <- GET("https://api.github.com/users/fmcruz23/repos")
+
+my_repo_list <- content(r) # will have info on every repo
+
+my_repos <- map_chr(my_repo_list, "full_name") # will produce a simple list of the names
+my_repos
+
+
+
+```
+
